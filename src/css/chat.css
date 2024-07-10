@@ -1,0 +1,470 @@
+/* CLEAN CSS */
+@import "body_reset.css";
+/* FONTS */
+@import "fonts.css";
+
+body {
+    background-color: rgb(252, 252, 252) !important;
+}
+
+
+
+/*HEADER*/
+
+.logo {
+    height: 80px;
+    max-width: 200px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1000;
+
+}
+
+
+.logo a {
+    display: block;
+    max-width: 200px;
+    margin: auto;
+}
+
+.logo img {
+    height: 70px;
+    margin: auto;
+    background-color: white;
+}
+
+.logo_index img {
+    z-index: 500;
+}
+
+/*NAV*/
+nav {
+    display: flex;
+    height: 80px;
+    position: fixed;
+    background: white;
+    width: 100%;
+    top: 0;
+    z-index: 250;
+}
+
+.menuButtonsContainer {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 200;
+}
+
+
+#menuBurgerIcon {
+    padding: 0px 8px;
+    font-size: 2em;
+}
+
+#menuBurger {
+    margin-top: 80px;
+}
+
+ul#menuBurger {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    background-color: white;
+    text-align: center;
+    transition: top 0.4s linear;
+    font-size: 1.2em;
+    padding-top: 50px;
+    /*pour afficher la cadegoria robes du menu au format mobile */
+}
+
+#menuBurger li {
+    margin: 20px auto;
+}
+
+#menuBurger li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menuBurger li a:hover {
+    text-decoration: underline;
+}
+
+
+.hideMenuBurger {
+    top: -380px;
+}
+
+.showMenuBurger {
+    top: 0;
+}
+
+ul.menu {
+    list-style: none;
+}
+
+#menuBurgerIcon {
+    cursor: pointer;
+    line-height: 50px;
+    transition: transform 0.5s;
+}
+
+.rotateIcon {
+    transform: rotate(90deg);
+}
+
+#userMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+#userMenu img {
+    width: 30px;
+    margin: 8px;
+}
+
+/* SEARCH */
+.researchBar form {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 150px auto 20px auto;
+    width: 90vw;
+    max-width: 600px;
+    border-bottom: solid black 1px;
+}
+
+.researchBar input {
+    height: 100%;
+    width: calc(100% - 30px);
+    border: none;
+    text-align: center;
+    background-color: rgb(252, 252, 252);
+}
+
+.researchBar input:focus {
+    outline: none;
+}
+
+.researchBar button {
+    width: 30px;
+    background: none;
+    border: none;
+}
+
+/*BODY*/
+
+body {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+#container-global h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    white-space: nowrap;
+    flex-wrap: wrap;
+}
+
+#container-global h1 span {
+    color: rgb(191, 44, 44);
+}
+
+.container-photos-haut {
+    display: flex;
+    width: 100%;
+}
+
+.container-photos-bas {
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.photo-grande {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.photo-grande img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.photo-grande img:hover {
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+}
+
+.photo-petite {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    position: relative;
+}
+
+.photo-petite img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.photo-petite img:hover {
+    transform: scale(1.03);
+}
+
+.photo-grande:first-child,
+.photo-petite:first-child {
+    margin-top: 0;
+    /* Pour éviter le margin-top sur le premier élément de chaque article */
+}
+
+.image-container {
+    position: relative;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    /* Assure que l'image ne dépasse pas */
+    cursor: pointer;
+}
+
+.random-produits {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 70px;
+    margin: 0px 20px;
+}
+
+.no-deco {
+    text-decoration: none;
+    color: rgb(223, 223, 223);
+}
+
+.image-container img {
+    object-fit: cover;
+    height: 750px;
+    width: 600px;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.03);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay p {
+    font-size: 1.5em;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+#categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    margin-bottom: 200px;
+}
+
+#categories h1 {
+    text-align: center;
+    width: 100%;
+}
+
+#categories span {
+    color: #BF2C2C;
+}
+
+.rond-categorie {
+    height: 300px;
+    width: 300px;
+}
+
+.rond-categorie img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.rond-categorie:hover img {
+    transform: scale(1.03);
+}
+
+.rond-categorie p {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    /*HEADER*/
+    .logo {
+        top: 0px;
+    }
+
+    .researchBar form {
+        margin: 90px auto 20px auto;
+    }
+
+    .menuButtonsContainer {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    /* BODY*/
+
+    #container-global h1 {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .photo-grande {
+        width: 600px;
+        height: auto;
+    }
+
+    .photo-petite {
+        width: 600px;
+        height: auto;
+        margin: 0;
+    }
+
+    /*Index*/
+    .random-produits {
+        margin: 0px 150px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /*HEADER*/
+    .logo {
+        top: 0px;
+    }
+
+    .researchBar form {
+        margin: 90px auto 20px auto;
+    }
+
+    .menuButtonsContainer {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    ul#menuBurger {
+        position: absolute;
+        left: 0;
+        height: auto;
+        background-color: white;
+        text-align: center;
+        z-index: 100;
+        transition: top 0.4s linear;
+        font-size: 1.4em;
+        padding: 0;
+    }
+
+    /*Index*/
+    .random-produits {
+        margin: 0px 150px;
+    }
+
+}
+
+
+
+/*LOGIN & INSCRIPTION.PHP*/
+.login-body {
+    background-image: url(/img/temporaire/model-image-login.jpg);
+    background-position: left 20% top 25%;
+}
+
+.register-body {
+    background-image: url(/img/temporaire/model-image-login.jpg);
+    background-position: left 20% top 25%;
+}
+
+.bg-body-secondary {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.logo-register {
+    max-width: 500px;
+    margin-top: 100px;
+}
+
+.registerbtn {
+    color: rgb(0, 110, 255);
+    text-decoration: underline;
+    transition: 0.5s ease-in-out;
+}
+
+.registerbtn:hover {
+    transition: 0.5s ease-in-out;
+    color: #ff0505;
+}
+
+/*FOOTER*/
+.footer-pad {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.color-footer {
+    background-color: rgb(248, 248, 248);
+}
+
+button .btn-color:hover {
+    background-color: rgba(29, 29, 29, 0.7);
+}
+
+/*Konami code*/
+.konami-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
